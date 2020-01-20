@@ -16,6 +16,7 @@ def infinite_loop():
 
 
 @app.route("/sleep/<int:seconds>")
+@app.route("/s/<int:seconds>")
 def sleep(seconds):
     SLEEP_PERIOD_S = 5
     request_id = uuid4()
@@ -25,4 +26,3 @@ def sleep(seconds):
             f"[request {request_id}] slept {(i + 1) * SLEEP_PERIOD_S} seconds, zzzz"
         )
     return jsonify({"result": f"[request {request_id}] slept for {seconds} seconds, done"})
-
