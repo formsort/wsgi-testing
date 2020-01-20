@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 flask = "*"
-waitress = "1.4.2"
+waitress = "*"
 
 [requires]
 python_version = "3.6"
